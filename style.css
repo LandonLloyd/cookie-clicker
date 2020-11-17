@@ -33,10 +33,6 @@
   width: 51%;
 }
 
-#clicker:focus{
-  height: 52vh;
-  width: 52%;
-}
 
 #score{
   display: inline;
