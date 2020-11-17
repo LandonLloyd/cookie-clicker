@@ -1,0 +1,44 @@
+*{
+  padding: 0;
+  margin: 0;
+  background: purple;
+  color: white;
+}
+
+#main-header{
+  text-align: center;
+  font-size: 3em;
+}
+
+#cookies{
+  height: 70vh;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#clicker{
+  border-radius: 50%;
+  height: 50vh;
+  width: 50%;
+  position: relative;
+  font-size: 3em;
+  border: 1px dashed white;
+}
+
+#clicker:hover{
+  height: 51vh;
+  width: 51%;
+}
+
+#clicker:focus{
+  height: 52vh;
+  width: 52%;
+}
+
+#score{
+  display: inline;
+  font-size: 2rem;
+}
