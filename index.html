@@ -7,10 +7,10 @@
   <body>
     <h1 id="main-header">Cookie Clicker</h1>
     <div id="cookies">
-      <button id="clicker" onclick="scoreUp()">Generate Cookies</button>
+      <button id="clicker" onMouseDown="scoreUp()" onMouseUp="mouseUp()" onMouseOver="mouseOver()" onMouseOut="mouseOut()">Generate Cookies</button>
     </div>
     <div id="score">
-      <p id="scoreboard">Cookies Generated: </p><div id="num">0</div>
+      <p id="scoreboard">Cookies Generated: </p><div id="num">500</div>
       
       </div>
       
@@ -20,7 +20,12 @@
           <p id="ac-price" class="upg-txt">Price: 100 Cookies</p>
           <p id="ac-count" class="upg-txt">You have 0 autoclickers</p>
           <p id="ac-desc" class="upg-txt">Autoclickers generate 1 cookie every second.</p>
-          
+        </div>
+        <div id="uc" class="upg">
+          <button id="upgradeClicker" onclick="upgradeClicker()" class="upg-btn">Upgrade Click</button>
+          <p id="uc-price" class="upg-txt">Price: 500 Cookies</p>
+          <p id="uc-count" class="upg-txt">You Click for 1 cookie</p>
+          <p id="uc-desc" class="upg-txt">Upgrade the amount of cookies you click for.</p>
         </div>
       </div>
       <script src="script.js"></script>
