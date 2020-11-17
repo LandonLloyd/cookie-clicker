@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1 id="main-header">Cookie Clicker</h1>
+    <h1 id="main-title" class="main-header">Cookie Clicker</h1>
     <div id="cookies">
       <button id="clicker" onMouseDown="scoreUp()" onMouseUp="mouseUp()" onMouseOver="mouseOver()" onMouseOut="mouseOut()">Generate Cookies</button>
     </div>
@@ -15,18 +15,37 @@
       </div>
       
       <div id="upgrades">
+        <h1 id="upg-title" class="main-header">Upgrades</h1>
+        
         <div id="ac" class="upg">
           <button id="autoclicker" onclick="auto()" class="upg-btn">Buy Autoclicker</button>
           <p id="ac-price" class="upg-txt">Price: 100 Cookies</p>
           <p id="ac-count" class="upg-txt">You have 0 autoclickers</p>
           <p id="ac-desc" class="upg-txt">Autoclickers generate 1 cookie every second.</p>
         </div>
+        
         <div id="uc" class="upg">
           <button id="upgradeClicker" onclick="upgradeClicker()" class="upg-btn">Upgrade Click</button>
           <p id="uc-price" class="upg-txt">Price: 500 Cookies</p>
           <p id="uc-count" class="upg-txt">You Click for 1 cookie</p>
           <p id="uc-desc" class="upg-txt">Upgrade the amount of cookies you click for.</p>
         </div>
+        
+        <div id="gma" class="upg">
+          <button id="grandma" onclick="grandma()" class="upg-btn">Have Grandma Make Cookies</button>
+          <p id="gma-price" class="upg-txt">Price: 1000 Cookies</p>
+          <p id="gma-count" class="upg-txt">You Have 0 Grandmas</p>
+          <p id="gma-desc" class="upg-txt">A Grandma will give you 10 cookies per second.</p>
+        </div>
+        
+        <div id="rckt" class="upg">
+          <button id="rocket" onclick="rocket()" class="upg-btn">Cookie Rocket</button>
+          <p id="rckt-price" class="upg-txt">Price: 5000 Cookies</p>
+          <p id="rckt-count" class="upg-txt">You have 0 rockets</p>
+          <p id="rckt-desc" class="upg-txt">A rocket will expand cookie operations to mars giving you 50 cookies per second.</p>
+        </div>
+        
+        
       </div>
       <script src="script.js"></script>
   </body>
