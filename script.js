@@ -36,6 +36,14 @@ let rcktCount = 0;
 
 let rcktCountP = document.getElementById("rckt-count");
 
+let factoryPrice = 25000;
+
+let fctryPrice = document.getElementById("fctry-price");
+
+let fctryCount = 0;
+
+let fctryCountP = document.getElementById("fctry-count");
+
 function scoreUp(){
   num.innerText = score;
   score += ucCount;
@@ -78,9 +86,9 @@ function auto(){
     }, 3000);
   }
   if(acCount === 1 || 0){
-    acCountP.innerText = "You have " + acCount + " autoclicker";
+    acCountp.innerText = "You have " + acCount + " autoclicker";
   }else{
-    acCountP.innerText = "You have " + acCount + " autoclickers";
+    acCountp.innerText = "You have " + acCount + " autoclickers";
   }
 }
 
@@ -131,7 +139,7 @@ function rocket(){
     rcktCount++;
     rcktCountP.innerText = "You have " + rcktCount + " rockets";
     setInterval(function(){
-      score = score + 50;
+      score = score + 25;
       num.innerText = score;
     }, 1000);
   }else if(num.innerText < rocketPrice){
@@ -139,5 +147,26 @@ function rocket(){
     setTimeout(function(){
       rcktPrice.innerText = "Price: " + rocketPrice + " Cookies";
     }, 3000);
+  }
+}
+
+
+function factory(){
+  if(num.innerText >= factoryPrice){
+    num.innerText = num.innerText - factoryPrice;
+    score = score - factoryPrice;
+    factoryPrice = factoryPrice + 5000;
+    fctryPrice.innerText = "Price: " + factoryPrice + " Cookies";
+    fctryCount++;
+    fctryCountP.innerText = "You have " + fctryCount + " factories";
+    setInterval(function(){
+      score = score + 100;
+      num.innerText = score;
+    }, 1000);
+  }else if(num.innerText < factoryPrice){
+    fctryPrice.innerText = "YOU DON'T HAVE ENOUGH COOKIES!";
+    setTimeout(function(){
+      fctryPrice.innerText = "Price: " + factoryPrice + " Cookies";
+    }, 3000)
   }
 }
